@@ -2,7 +2,7 @@
 <nav>
   <div class="nav-wrapper black">
     <a class="brand-logo">Social Banners</a>
-    <a href="#" class="brand-logo center">
+    <a href="#" class="brand-logo center" (click)="saveImage(banner)">
       Pobierz
     </a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -18,7 +18,7 @@
 <div [ngClass]="layout">
   <!-- Component Banner -->
   <div class="banner">
-    <div class="banner-text" [ngStyle]="getBannerStyles()">
+    <div #banner class="banner-text" [ngStyle]="getBannerStyles()">
       <span contenteditable="true" [style.fontSize.px]="fontSize">
         Zacznij programować w Angularze
       </span>
